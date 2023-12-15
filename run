@@ -1,0 +1,18 @@
+#!/bin/bash
+
+QEMU="qemu-system-riscv64"
+QEMUOPTS="-bios none -nographic -kernel kernel/build/kernel.elf -machine virt -serial mon:stdio -m 128 -smp 1"
+
+DEBUG_QEMUOPTS="$QEMUOPTS -s -S"
+
+case "$1" in
+  debug)
+    echo -e "run the gdb script in another terminal!\n"
+    $QEMU $DEBUG_QEMUOPTS
+    ;;
+  *)
+    $QEMU $QEMUOPTS
+    ;;
+esac
+
+
