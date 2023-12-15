@@ -1,6 +1,6 @@
-#define UART0_BASE 0x10000000L
-
+/* Ny entrypoint */
 void start() 
 {
-    *(unsigned char *)UART0_BASE = ':';
+    *(unsigned char *)0x10000000L = ':';
+    *(unsigned char *)0x10000000L = '\n';
 }

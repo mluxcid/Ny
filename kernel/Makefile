@@ -42,7 +42,7 @@ $(BUILD)/%.o: %.c
 
 # Compilation rules for *.S files.
 $(BUILD)/%.o: %.S
-	@echo "[AS]\building $@ from $<"
+	@echo "[AS]\tbuilding $@ from $<"
 	@mkdir -p $(dir $@)
 	@$(AS) $(ASFLAGS) -c $< -o $@
 
