@@ -14,7 +14,7 @@ CFLAGS ?= -O -ggdb
 CFLAGS += -nostdlib -nostartfiles
 CFLAGS += -fno-stack-protector -fno-common -ffreestanding
 CFLAGS += -mcmodel=medany -mno-relax
-CFLAGS += -I.
+CFLAGS += -I. -I../include/
 
 # assembler flags
 ASFLAGS ?= -g

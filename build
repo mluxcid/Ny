@@ -3,10 +3,13 @@ set -e
 
 # TODO: as soon as drivers get added
 case "$1" in
-  kernel)
-    make -C kernel -j$(nproc)
-    ;;
-  *)
-    make -C kernel -j$(nproc)
-    ;;
+    clean)
+        make -C kernel clean
+        ;;
+    kernel)
+        make -C kernel -j$(nproc)
+        ;;
+    *)
+        make -C kernel -j$(nproc)
+        ;;
 esac
