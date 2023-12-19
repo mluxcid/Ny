@@ -11,7 +11,7 @@ _start:
 loop:
     j loop
 
-.section .bss
-.align 8
+.section .data
+.align 2
 stack_top:
     .space 8192

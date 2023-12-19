@@ -1,7 +1,6 @@
 #include "asm/spinlock.h"
 
 // TODO: implement SMP for locking
-
 void initlock(spinlock *lock, char *name)
 {
     lock->name = name;
